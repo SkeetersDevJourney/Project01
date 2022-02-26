@@ -55,38 +55,59 @@ a:hover {
   color: white
 }
 
-header {
+.home-header {
   text-align: center;
-  background: url('/images/AZ_img.jpg') no-repeat top center ;
+  background: url('../images/AZ_img.jpg') no-repeat center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
 }
-header {
+
+.home-header {
   line-height: 1.5;
 }
+
+.other-headers {
+  text-align: center;
+  background: url('../images/AZ_img.jpg') no-repeat center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
 header .profile-image {
   margin-top: 50px;
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 5px solid white;
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  border: 5px solid #222;
+  transform: scale(1.2) rotate(7.5deg);
 }
 .tag {
-  background-color: #efefef;
+  background-color: white;
   color: black;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
+  transition: all .5s;
 } 
+
+.main:hover {
+  transform: scale(1.2);
+  background-color: #222;
+  color:  gold;
+}
+
 .location {
   background-color: #222;
-  color: yellow;
+  color: gold;
+  margin-bottom: 20px;
 }
 .card {
   margin: 30px;
@@ -94,12 +115,33 @@ header .profile-image:hover {
   max-width: 500px;
   text-align: left;
   background: #fff;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 5px solid #ccc;
+  border-right:  5px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: maroon;
+}
+.card-title {
+  text-align: center;
+}
+
+.card-text-1 {
+  text-align: center;
+}
+
+.game-img {
+  max-width: 200px;
+  margin: 10px;
+  border-bottom: 4px solid #ccc;
+  border-right:  4px solid #ccc;
+  border-radius: 10px;
+}
+
+.game-img:hover {
+  border-color: maroon;
+  transition: all .5s;
 }
 
 ul.skills {
@@ -110,20 +152,25 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: gold;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: maroon
+  ;
+}
+.skills li:nth-child(even) {
+  color: black
+  ;
 }
 
 footer {
-  width: 100%;
+  width: 100%; 
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 20px 0 40px 20px; 
 }
 
 footer .copyright {
@@ -141,15 +188,17 @@ footer ul li {
   display: inline-block;
 }
 
-a.artstation {
-  background-image: url(/images/art_img.png);
+.artstation {
+  background-image: url(../images/art_img.png);
+}
+.git {
+    background-image: url(../images/git_img.png);
+}
+.insta {
+  background-image: url(../images/insta_img.png);
 }
 
-a.git {
-    background-image: url(images/git_img.png);
-}
-
-a.social {
+.social {
   display: inline-block;
   text-indent: -9999px;
   margin-left: 5px;
@@ -160,7 +209,7 @@ a.social {
   transition: all .5s;
 }
 
-a.social:hover {
+.social:hover {
   opacity: 1;
 }
 .clearfix {
@@ -179,8 +228,12 @@ a.social:hover {
       margin: 0 auto;
   }
 
-  header {
+  .main-header {
     min-height: 470px;
+  }
+
+  .other-headers {
+    min-height: 150px;
   }
 
   .nav {
@@ -199,8 +252,7 @@ a.social:hover {
 
   footer {
     font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
+    margin-top: 40px auto;
   }
 
 }
